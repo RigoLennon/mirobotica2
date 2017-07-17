@@ -1,0 +1,209 @@
+<!--Si la actividad no tiene usuario de creacion evita el error-->
+<% unless @article.user.nil? %>
+    <%end%>
+<!---->
+
+
+
+<!-- Header with Background Image -->
+<header class="business-header" style="background:url(<%= @article.image.url(:thumb) %>
+    );top:0px;left:0px;width:100%;height: 520px;background-size: cover">
+  <div class="container">
+    <div class="row">
+      <div class="center-xs">
+        <!--Titulo de la actividad -->
+        <br>
+        <h1x2 style="text-shadow: 4px 4px 7px #000000;"><%= @article.title %></h1x2>
+        <!-->
+        <br>
+        <br>
+        <br>
+        <!--Cuerpo del articulo-->
+        <h3x2 style="text-shadow: 4px 4px 7px #000000;"><%= @article.body%></h3x2>
+        <!-->
+      </div>
+    </div>
+  </div>
+</header>
+
+<br>
+<!--Advertecnia de sitios inseguros-->
+<div class="center-xs">
+  <span class="label label-danger">¡Advertencia! - ¡Muchos webs sites pueden no ser confiables!</span>
+</div>
+<!-->
+
+<!--Acerca de esta activiadad-->
+<div class="col-md-12">
+  <br>
+  <h2 class="center-xs">
+    <small>Acerca de esta actividad</small>
+  </h2>
+</div>
+
+<div style="position: relative;width: 100%;margin-top: 8em;margin-bottom: 5em">
+  <blockquote style="margin: auto;width: 60%;border: 3px solid #73AD21;padding: 20px; width: 60%;text-align: left">
+    <p><strong>Objetivo meta de la actividad:</strong>
+      <br><br>
+        • Controlar el encendido y apagado de un LED, conocer la programación de
+      funciones y el ciclo loop.
+      <br><br>
+      <strong>Completada la actividad el participante será capaz de:</strong>
+      <br><br>
+        •Desarrollar su primer proyecto de Robótica Creativa; donde su imaginación será su
+      único límite.</p>
+  </blockquote>
+
+</div>
+<!-->
+
+<hr style="border-top: 1px solid #8c8b8b;
+    border-bottom: 1px solid #fff;">
+
+<!--Video de la actividad-->
+<div class="center-xs">
+  <h2><small>Video de la aplicacion</small></h2>
+  <br>
+
+  <iframe width="640" height="400" src="https://www.youtube.com/embed/ok5MZjs2ORo" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<hr style="border-top: 1px solid #8c8b8b;
+    border-bottom: 1px solid #fff;">
+
+<!--Diagramas de fritzing-->
+<div class="col-md-12">
+  <br>
+  <h2 class="center-xs">
+    <small>Blink (LED parpadeando):</small>
+  </h2>
+</div>
+<br>
+
+
+<!--Imagen de la actividad-->
+<div class="center-xs">
+  <%= image_tag 'actividad.png'%>
+</div>
+<br>
+<!-->
+
+<hr style="border-top: 1px solid #8c8b8b;
+    border-bottom: 1px solid #fff;">
+
+<!--Acerca de esta activiadad-->
+<div class="col-md-12">
+  <br>
+  <h2 class="center-xs">
+    <small>Alcance de la actividad</small>
+  </h2>
+</div>
+<br>
+
+<div style="position: relative;width: 100%;margin-top: 8em;margin-bottom: 5em">
+  <blockquote style="margin: auto;width: 60%;border: 3px solid #73AD21;padding: 20px; width: 60%;text-align: center">
+    <p><strong>Estudio de la actividad:</strong>
+      <br><br>
+      • La robótica Creativa.
+      <br><br>
+      • Sus aplicaciones.
+      <br><br>
+      • Para que sirve.
+      <br><br>
+      • Beneficios.
+      </p>
+  </blockquote>
+
+</div>
+<!-->
+
+<div style="position: relative;width: 100%;margin-top: 8em;margin-bottom: 5em">
+  <blockquote style="margin: auto;width: 60%;border: 3px solid #73AD21;padding: 20px; width: 60%;text-align: left">
+    <p><strong>Elementos para implementacion de la actividad:</strong>
+    <div class="center-xs">
+      <%= image_tag "materiales.png", :size=> "600x600"%>
+    </div>
+      <br><br>
+      • Arduino uno.
+      <br>
+      • Led.
+      <br>
+      • Protoboard.
+      <br>
+      • Resistencia 220Ω.
+      <br><br>
+      <strong>Hacer notas sobre lo que considere interesante para su aprendizaje.</strong>
+      <br><br>
+      • Después del ejercicio Usted podrá consultar libros y web sites para ampliar su
+      conocimiento en el tema.
+      <br>
+      • Principios.
+      <br>
+      • Diseños.
+      <br>
+      • Aplicaciones y tecnologías.
+      <br>
+      • Creatividad.
+      <br>
+      • Y Más.
+    </p>
+  </blockquote>
+
+</div>
+
+
+
+<div class="col-md-12">
+  <blockquote>
+    <p><strong>Alcance de la actividad:</strong>
+      <br><br>
+      • Estudio de la actividad:
+      <br>
+     iones.robótica Creativa.
+      <br>
+      • Sus aplicaciones.
+      <br>
+      • Para que sirve.
+      <br>
+      • Beneficios.
+      <br>
+      <br>
+      <strong>Elementos para implementación de la actividad:</strong>
+      <!--Imagen de los materiales necesarios-->
+    <div class="center-xs">
+      <%= image_tag "materiales.png", :size=> "600x600"%>
+    </div>
+    <!-->
+    <br>
+      • Arduino uno.
+      <br>
+      • Led.
+      <br>
+      • Protoboard.
+      <br>
+      • Resistencia 220Ω.
+      <br><br>
+      <strong>Hacer notas sobre lo que considere interesante para su aprendizaje.</strong>
+      <br><br>
+      • Después del ejercicio Usted podrá consultar libros y web sites para ampliar su
+      conocimiento en el tema.
+      <br>
+      • Principios.
+      <br>
+      • Diseños.
+      <br>
+      • Aplicaciones y tecnologías.
+      <br>
+      • Creatividad.
+      <br>
+      • Y Más.</p>
+  </blockquote>
+
+</div>
+<!-->
+
+
+<br>
+
+<div class="col-md-8">
+</div>

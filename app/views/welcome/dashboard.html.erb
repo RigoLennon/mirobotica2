@@ -1,0 +1,73 @@
+<div class="card">
+  <div class="card-header" data-background-color="purple">
+    <h2 class="title">Listado de Cursos</h2>
+    <div class="row center-xs">
+      <%= link_to "Nuevo Curso/Categoria", new_category_path, class:"btn btn-warning" %>
+    </div>
+  </div>
+  <div class="card-content table-responsive table-full-width">
+    <table class="table">
+      <thead class="text-danger">
+      <th>Titulo</th>
+      <th>Color</th>
+      <th>Fecha de creacion</th>
+      </thead>
+
+
+      <tbody>
+      <% @categories.each do |category| %>
+          <tr>
+            <td><%= category.title %></td>
+            <td><%= category.color %></td>
+            <td><%= category.created_at%></td>
+            <td><%= link_to 'Mostrar', category, class:"btn btn-info" %></td>
+            <td><%= link_to 'Editar', edit_category_path(category),class:"btn btn-warning" %></td>
+            <td><%= link_to 'Eliminar', category, class:"btn btn-danger",method: :delete, data: { confirm: '¿Esta seguro de que quiere eliminar?' } %></td>
+          </tr>
+      <% end %>
+
+
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-header" data-background-color="purple">
+    <h2 class="title">Listado de Actividades</h2>
+    <div class="row center-xs">
+      <%= link_to "Nueva actividad", new_article_path, class:"btn btn-warning" %>
+    </div>
+  </div>
+  <div class="card-content table-responsive table-full-width">
+    <table class="table">
+      <thead class="text-danger">
+      <th>Nombre</th>
+      <th>Autor</th>
+      <th>Fecha de creacion</th>
+
+      <th>Visitas</th>
+      </thead>
+
+
+      <tbody>
+      <% @articles.each do |article| %>
+          <tr>
+            <td><%= article.title %></td>
+            <td><%= article.user_id %></td>
+            <td><%= article.created_at%></td>
+            <td><%= article.visits_count %></td>
+            <td><%= link_to 'Mostrar', article, class:"btn btn-info" %></td>
+            <td><%= link_to 'Editar', edit_article_path(article),class:"btn btn-warning" %></td>
+            <td><%= link_to 'Eliminar', article, class:"btn btn-danger",method: :delete, data: { confirm: '¿Esta seguro de que quiere eliminar?' } %></td>
+          </tr>
+      <% end %>
+
+
+      </tbody>
+    </table>
+
+  </div>
+</div>
