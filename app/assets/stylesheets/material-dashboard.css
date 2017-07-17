@@ -3670,8 +3670,10 @@ footer .btn {
   color: #999999;
 }
 .card img {
-  width: 100%;
+  width: 150%;
   height: auto;
+    -webkit-filter: drop-shadow(-2px 3px 13px #222);
+    filter:         drop-shadow(-2px 3px 13px #222);
 }
 .card .category .material-icons {
   position: relative;
@@ -3722,29 +3724,50 @@ footer .btn {
   box-shadow: 0 12px 20px -10px rgba(255, 152, 0, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(255, 152, 0, 0.2);
 }
 .card [data-background-color="red"] {
-  background: linear-gradient(60deg, #ef5350, #e53935);
+  background: linear-gradient(90deg, #ef5350, #e53935);
   box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);
 }
-.card [data-background-color="lego"] {
-    background: linear-gradient(60deg, #f9c800, #ebeb67);
-    box-shadow: 0 12px 20px -10px rgba(244, 122, 32, 0.53), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.43);
-}
 .card [data-background-color="arduino"] {
-    background: linear-gradient(60deg, #00979d, #16bbd0);
+    background: linear-gradient(95deg, #17cee4, #00979d);
     box-shadow: 0 12px 20px -10px rgba(0, 151, 157, 0.42), 0 4px 20px 0px rgba(0, 0, 0, 0.24), 0 7px 8px -5px rgba(22, 187, 208, 0.43);
 }
 .card [data-background-color="amazeing"] {
-    background: linear-gradient(60deg, #028482, #6baa6b);
+    background: linear-gradient(95deg, #54e1e9, #4a979f);
     box-shadow: 0 12px 20px -10px rgba(255, 152, 0, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(255, 152, 0, 0.2);
+}
+.card [data-background-color="jousting"] {
+    background: linear-gradient(95deg, #5d707e, #222d36);
+    box-shadow: 0 12px 20px -10px rgba(0, 151, 157, 0.42), 0 4px 20px 0px rgba(0, 0, 0, 0.24), 0 7px 8px -5px rgba(22, 187, 208, 0.43);
 }
 .card [data-background-color="line"] {
-    background: linear-gradient(60deg, #692dac, #9d538e);
+    background: linear-gradient(95deg, #ffb134, #eb9e34);
     box-shadow: 0 12px 20px -10px rgba(255, 152, 0, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(255, 152, 0, 0.2);
 }
-.card [data-background-color="rave"] {
-    background: linear-gradient(60deg, #ff9700, #eb0000);
-    box-shadow: 0 12px 20px -10px rgba(255, 152, 0, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(255, 152, 0, 0.2);
+.card [data-background-color="ligther"] {
+    background: linear-gradient(95deg, #42a1ab, #154e58);
+    box-shadow: 0 12px 20px -10px rgba(0, 151, 157, 0.42), 0 4px 20px 0px rgba(0, 0, 0, 0.24), 0 7px 8px -5px rgba(22, 187, 208, 0.43);
 }
+.card [data-background-color="sumobot"] {
+    background: linear-gradient(95deg, #9e1b45, #70153a);
+    box-shadow: 0 12px 20px -10px rgba(0, 151, 157, 0.42), 0 4px 20px 0px rgba(0, 0, 0, 0.24), 0 7px 8px -5px rgba(22, 187, 208, 0.43);
+}
+.card [data-background-color="iq"] {
+    background: linear-gradient(95deg, #96c752, #749a3f);
+    box-shadow: 0 12px 20px -10px rgba(0, 151, 157, 0.42), 0 4px 20px 0px rgba(0, 0, 0, 0.24), 0 7px 8px -5px rgba(22, 187, 208, 0.43);
+}
+.card [data-background-color="robotovate"] {
+    background: linear-gradient(95deg, #e2472f, #a63423);
+    box-shadow: 0 12px 20px -10px rgba(0, 151, 157, 0.42), 0 4px 20px 0px rgba(0, 0, 0, 0.24), 0 7px 8px -5px rgba(22, 187, 208, 0.43);
+}
+.card [data-background-color="alpinebot"] {
+    background: linear-gradient(95deg, #2b84c6, #236ba1);
+    box-shadow: 0 12px 20px -10px rgba(0, 151, 157, 0.42), 0 4px 20px 0px rgba(0, 0, 0, 0.24), 0 7px 8px -5px rgba(22, 187, 208, 0.43);
+}
+.card [data-background-color="fire"] {
+    background: linear-gradient(95deg, #df2141, #a81931);
+    box-shadow: 0 12px 20px -10px rgba(0, 151, 157, 0.42), 0 4px 20px 0px rgba(0, 0, 0, 0.24), 0 7px 8px -5px rgba(22, 187, 208, 0.43);
+}
+
 .card [data-background-color] {
   color: #FFFFFF;
 }
