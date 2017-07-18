@@ -8,7 +8,7 @@ class Article < ApplicationRecord
   before_save :set_visits_count
   after_create :save_categories
 
-  has_attached_file :image, styles:{ :thumb => "281x139#", :medium =>"1280x720#" }
+  has_attached_file :image, styles:{ :thumb => "281x139#", :medium =>"1280x720#", :high => "1920 x 1080#" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
 
