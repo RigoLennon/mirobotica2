@@ -456,7 +456,7 @@ h2.title {
 .sidebar .sidebar-wrapper,
 .off-canvas-sidebar .sidebar-wrapper {
   position: relative;
-  height: calc(100vh - 75px);
+  height: calc(95vh - 75px);
   overflow: auto;
   width: 260px;
   z-index: 4;
@@ -701,7 +701,7 @@ h2.title {
   border-radius: 3px;
   position: absolute;
   padding: 12px 30px;
-  margin: 10px 1px;
+  margin: 1% 40%;
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
