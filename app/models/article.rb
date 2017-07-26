@@ -11,6 +11,11 @@ class Article < ApplicationRecord
   has_attached_file :image, styles:{ :thumb => "281x139#", :medium =>"1280x720#", :high => "1920 x 1080#" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
+  has_attached_file :imagefritzing, styles:{ :thumb => "281x139#", :medium =>"1280x720#", :high => "1920 x 1080#" }
+  validates_attachment_content_type :imagefritzing, content_type: /\Aimage\/.*\Z/
+
+  has_attached_file :imagematerials, styles:{ :thumb => "281x139#", :medium =>"1280x720#", :high => "1920 x 1080#" }
+  validates_attachment_content_type :imagematerials, content_type: /\Aimage\/.*\Z/
 
 
   def categories=(value)

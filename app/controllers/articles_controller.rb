@@ -70,7 +70,7 @@ class ArticlesController < ApplicationController
 
 
   def article_params
-    params.require(:article).permit(:title,:body,:image,:categories)
+    params.require(:article).permit(:title,:body,:objectives,:finishactivity,:goals,:requirements,:image,:imagefritzing,:imagematerials,:categories,:youtubeurl)
   end
 
 end
