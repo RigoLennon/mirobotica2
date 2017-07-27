@@ -1,12 +1,16 @@
 <% if user_signed_in? %>
 <p id="notice"><%= notice %></p>
 
-  <h1><%= @category.title %></h1>
-<h2>Actividades</h2>
+    <div class="row">
+      <div class="col-md-12 col-md-offset-4">
+        <h1><%= @category.title %></h1>
+        <h2>Actividades</h2>
+      </div>
+    </div>
 
 <% @category.articles.each do |article| %>
 
-    <div class="col-md-4">
+    <div class="col-lg-4">
       <div class="card">
         <div class="card-header card-chart" data-background-color="orange"
              style="background:url(<%= article.image.url(:thumb)%>);">
