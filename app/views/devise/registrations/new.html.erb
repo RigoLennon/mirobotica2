@@ -1,55 +1,58 @@
-<div class="row center-xs">
-  <div class="col-xs-8 col-md-6">
-    <div class="box">
-<h2>Registrate</h2><br>
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+</head>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<body>
+<div class="login">
+  <div class="login-screen">
+    <div class="app-title">
+      <h1>Registrarse</h1>
+    </div>
 
+    <div class="login-form">
 
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+          <div class="control-group">
+            <%= f.label :email, "Correo electronico" %><br /><br>
+            <%= f.email_field :email, autofocus: true, class:"login-field"%>
+          </div>
+          <br>
 
+          <div class="control-group">
+            <%= f.label :password, "Contraseña" %><br />
+            <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> caracteres mínimo)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off", class:"login-pass" %>
+          </div>
+          <br>
 
-          <div class="header header-primary ">
-		<span class="input-group-addon">
-			<i class="fa fa-group"></i>
-      <%= f.label :email, "Correo Electronicox2" %><br />
-      <%= f.email_field :email, autofocus: true, class:"form-control" %>
-
-		</span>
+          <div class="control-group">
+            <%= f.label :password_confirmation, "Confirmar contraseña" %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off", class:"login-pass" %>
           </div>
 
           <br>
 
-  <div class="input-group">
-    <span class="input-group-addon">
-      <i class="fa fa-group"></i>
-    <%= f.label :password, "Contraseña" %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> caracteres mínimo)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
-      </span>
-  </div>
-          <br>
-  <div class="input-group">
-    <span class="input-group-addon">
-      <i class="fa fa-group"></i>
-    <%= f.label :password_confirmation, "Confirmar contraseña" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
-      </span>
-  </div>
-          <br>
+          <div class="control-group">
+            <%= f.submit "Registrarse", class:"btnlog btn-success" %>
+          </div>
 
+          <br>
+      <% end %>
 
-  <div class="actions">
-    <%= f.submit "Registrarse", class:"btn btn-success" %>
-  </div>
-<% end %>
-      <br>
-      <br>
-      <p>¿Ya tienes cuenta? - Inicia sesion</p>
+      <div class="control-group">
+        <p>¿Ya tienes cuenta? - Inicia sesion</p>
         <%= render "devise/shared/links" %>
 
+        <%= link_to 'Regresar', :back, class: "btnlog btn-info" %>
+      </div>
     </div>
   </div>
 </div>
+</body>
+
+</html>

@@ -1,16 +1,19 @@
 <div class="card">
   <div class="card-header" data-background-color="purple">
     <h2 class="title">Listado de Cursos</h2>
-    <div class="row center-xs">
-      <%= link_to "Nuevo Curso/Categoria", new_category_path, class:"btn btn-warning" %>
+    <div class="col-md-12">
+      <%= link_to "Nuevo Curso/Categoria", new_category_path, class:"btn btn-success" %>
     </div>
   </div>
-  <div class="card-content table-responsive table-full-width">
+  <div class="card-content table-responsive table-medium-width">
     <table class="table">
       <thead class="text-danger">
       <th>Titulo</th>
       <th>Color</th>
       <th>Fecha de creacion</th>
+      <th></th>
+      <th>Acciones</th>
+      <th></th>
       </thead>
 
 
@@ -37,8 +40,8 @@
 <div class="card">
   <div class="card-header" data-background-color="purple">
     <h2 class="title">Listado de Actividades</h2>
-    <div class="row center-xs">
-      <%= link_to "Nueva actividad", new_article_path, class:"btn btn-warning" %>
+    <div class="col-md-12">
+      <%= link_to "Nueva actividad", new_article_path, class:"btn btn-success" %>
     </div>
   </div>
   <div class="card-content table-responsive table-full-width">
@@ -47,8 +50,10 @@
       <th>Nombre</th>
       <th>Autor</th>
       <th>Fecha de creacion</th>
-
       <th>Visitas</th>
+      <th></th>
+      <th>Acciones</th>
+      <th></th>
       </thead>
 
 
@@ -63,6 +68,46 @@
             <td><%= link_to 'Editar', edit_article_path(article),class:"btn btn-warning" %></td>
             <td><%= link_to 'Eliminar', article, class:"btn btn-danger",method: :delete, data: { confirm: '¿Esta seguro de que quiere eliminar?' } %></td>
           </tr>
+      <% end %>
+
+
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-header" data-background-color="purple">
+    <h2 class="title">Listado de Alumnos</h2>
+    <div class="col-md-12">
+      <%= link_to "Nueva actividad", new_article_path, class:"btn btn-success" %>
+    </div>
+  </div>
+  <div class="card-content table-responsive table-full-width">
+    <table class="table">
+      <thead class="text-danger">
+      <th>Nombre</th>
+      <th>Permiso</th>
+      <th>Fecha de creacion</th>
+      <th>Visitas a la pagina</th>
+      <th></th>
+      <th>Acciones</th>
+      <th></th>
+      </thead>
+
+
+      <tbody>
+      <% @users = User.all %>
+      <% @users.each do |user|%>
+      <tr>
+        <td><%= user.email%></td>
+        <td><%= user.permission_level%></td>
+        <td><%= user.created_at%></td>
+        <td><%= user.sign_in_count%></td>
+        <td><%= link_to 'Editar', (user),class:"btn btn-warning" %></td>
+      </tr>
       <% end %>
 
 

@@ -1,6 +1,9 @@
-<h1>Editing Category</h1>
+<% if user_signed_in? %>
+
+    <h1>Editing Category</h1>
 
 <%= render 'form', category: @category %>
 
 <%= link_to 'Ver', @category, class:"btn btn-info" %>
 <%= link_to 'Regresar', categories_path, class:"btn" %>
+<%end%>

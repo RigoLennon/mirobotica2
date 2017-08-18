@@ -4,8 +4,9 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
-#Ruby version
+# Jquery version
+gem 'jquery-ui-rails'
+# Ruby version
 ruby '2.4.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
@@ -45,6 +46,9 @@ gem "aasm"
 
 #Gema para los videos de youtube
 gem 'yt', '~> 0.28.0'
+
+#Gema para los examenes
+gem 'quizzer'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

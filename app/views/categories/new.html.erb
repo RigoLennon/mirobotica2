@@ -1,7 +1,10 @@
-<div class="row center-xs">
+<% if user_signed_in? %>
+
+    <div class="col-md-12">
   <h1>Nueva Categoria/Curso</h1>
 </div>
 <br>
 <div class="col-md-12 ">
   <%= render 'form', category: @category %>
 </div>
+<%end%>

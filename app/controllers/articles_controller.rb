@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!, except: [:show,:index]
+  before_action :authenticate_user!, except: [:show,:index,:exam]
   before_action :set_article, except: [:index,:new,:create]
   before_action :authenticate_teacher!, only: [:new, :create,:update]
   before_action :authenticate_admin!, only:[:new,:create,:update,:destroy]
@@ -70,7 +70,7 @@ class ArticlesController < ApplicationController
 
 
   def article_params
-    params.require(:article).permit(:title,:body,:objectives,:finishactivity,:goals,:requirements,:image,:imagefritzing,:imagematerials,:categories,:youtubeurl)
+    params.require(:article).permit(:title,:body,:objectives,:finishactivity,:goals,:requirements,:image,:imagefritzing,:imagematerials,:categories,:youtubeurl,:form,:imagearduino)
   end
 
 end
